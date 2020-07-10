@@ -12,8 +12,9 @@ const LandingCss = styled.div`
     border: 1px solid;
     height: 480px;
     overflow: hidden;
-    // background: black;
-    // color: white;
+    @media(max-width: 600px){
+      width: 370px;
+    }
   }
   .image{
     width: 100%;
@@ -44,7 +45,10 @@ const LandingCss = styled.div`
     display: grid;
     grid-template-columns: 220px 220px 220px;
     column-gap: 20px;
-    row-gap: 15px;
+    row-gap: 30px;
+    @media (max-width: 600px) {
+      grid-template-columns: 250px;
+    }
   }
   .analysedFace {
     width: 100%;
@@ -88,6 +92,24 @@ const LandingCss = styled.div`
   @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+  }
+  .wrapper{
+    overflow-y: scroll;
+    @media(max-width: 600px){
+      padding: 15px;
+    }
+  }
+  .mobileAlign{
+    @media(max-width: 600px){
+      display: flex;
+      justify-content: center;
+      align-item: center;
+    }
+  }
+  .errorMsg{
+    color: red;
+    font-size: 18px;
+    margin: auto;
   }
 `
 
